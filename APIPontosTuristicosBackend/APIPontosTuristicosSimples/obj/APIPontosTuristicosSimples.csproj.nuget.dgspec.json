@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andre\\source\\repos\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj": {}
+    "C:\\Users\\Andre\\source\\repos\\ApiPontosTuristicos\\APIPontosTuristicosBackend\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andre\\source\\repos\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj": {
+    "C:\\Users\\Andre\\source\\repos\\ApiPontosTuristicos\\APIPontosTuristicosBackend\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andre\\source\\repos\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj",
+        "projectUniqueName": "C:\\Users\\Andre\\source\\repos\\ApiPontosTuristicos\\APIPontosTuristicosBackend\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj",
         "projectName": "APIPontosTuristicosSimples",
-        "projectPath": "C:\\Users\\Andre\\source\\repos\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj",
+        "projectPath": "C:\\Users\\Andre\\source\\repos\\ApiPontosTuristicos\\APIPontosTuristicosBackend\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples.csproj",
         "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andre\\source\\repos\\APIPontosTuristicosSimples\\APIPontosTuristicosSimples\\obj\\",
+        "outputPath": "C:\\Users\\Andre\\source\\repos\\ApiPontosTuristicos\\APIPontosTuristicosBackend\\APIPontosTuristicosSimples\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -69,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.1, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[4.12.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

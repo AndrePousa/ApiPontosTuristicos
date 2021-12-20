@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = APIPontosTuristicosSimples
-build_property.ProjectDir = C:\Users\Andre\source\repos\APIPontosTuristicosSimples\APIPontosTuristicosSimples\
+build_property.ProjectDir = C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\

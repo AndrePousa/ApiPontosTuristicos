@@ -1,0 +1,7 @@
+.formContainer{
+  width: 400px;
+  height: 600px;
+  background-color: aquamarine;
+  display:flex;
+  justify-content: center;
+}

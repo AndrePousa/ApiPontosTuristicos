@@ -19,7 +19,7 @@ namespace APIPontosTuristicosSimples.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PontoTuristicos", x => x.id);
+                    table.PrimaryKey("PK_PontoTuristico", x => x.id);
                 });
         }
 

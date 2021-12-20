@@ -31,6 +31,9 @@ namespace APIPontosTuristicosSimples.Migrations
                     b.Property<string>("city")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("name")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -40,7 +43,7 @@ namespace APIPontosTuristicosSimples.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("PontoTuristicos");
+                    b.ToTable("PontoTuristico");
                 });
 #pragma warning restore 612, 618
         }
