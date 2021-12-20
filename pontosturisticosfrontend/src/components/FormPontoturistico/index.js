@@ -13,15 +13,18 @@ const FormPontoTuristico = ({ id }) => {
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
+  const [description, setDescription] = useState('');
 
   const savePontoTuristico = async (event)=> {
     event.preventDefault();
 
     if(id){
       let response = await axios.put(`https://localhost:44329/api/PontosTuristicos/${id}`, {
+        id:id,
         name:name,
         address:address,
         city: city,
+        description:description,
         state:state,
       });
     }
@@ -30,6 +33,7 @@ const FormPontoTuristico = ({ id }) => {
         name:name,
         address:address,
         city: city,
+        description:description,
         state:state,
     });
     }
@@ -45,6 +49,7 @@ const FormPontoTuristico = ({ id }) => {
       setAddress(response.data.address);
       setCity(response.data.city);
       setState(response.data.state);
+      setDescription(response.data.description);
     }
   }
 
@@ -104,7 +109,7 @@ const FormPontoTuristico = ({ id }) => {
           </div>
           <div className="fieldDescription">
             <label for="description"><strong>Descrição</strong></label>
-            <textarea type="text" name="description"/>
+            <textarea onChange={e => setDescription(e.target.value)} type="text" name="description">{description}</textarea>
           </div>
           <button onClick={savePontoTuristico}>Cadastrar</button>
         </form>

@@ -2,14 +2,16 @@ import React from 'react';
 import './styles.css';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-// "id": 2,
-//   "name": "Las Vegas",
-//   "address": "California",
-//   "city": "Las vegas",
-//   "state": "California"
+
 
 const PontoTuristico = ({data}) =>{
+
+  const deletePontoTuristico = async () =>{
+
+    let response = await axios.delete(`https://localhost:44329/api/PontosTuristicos/${data.id}`)
+  }
  
   return(
     <>
@@ -29,7 +31,8 @@ const PontoTuristico = ({data}) =>{
          <div className="pontoTuristicoState">
            {data.state}
          </div>
-         <button><Link to={`/cadastrar/${data.id}`}>Ver detalhes</Link></button>
+         <button><Link to={`/cadastrar/${data.id}`}>Editar</Link></button>
+         <button onClick={deletePontoTuristico}>Deletar</button>
        </div> 
     </> 
   )
