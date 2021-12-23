@@ -1,5 +1,7 @@
 .pontoTuristicoContainer{
   padding-left:50px;
+  padding-right: 50px;
+  /* width:100vw; */
 }
 
 .pontoTuristicoName{
@@ -7,4 +9,11 @@
 
 .pontoTuristicoDescricao{
 
+}
+
+.areaButtons{
+  margin-top:20px;
+}
+.deletarButton{
+  margin-left:50px;
 }

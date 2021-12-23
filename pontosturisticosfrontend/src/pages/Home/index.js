@@ -25,8 +25,8 @@ const Home = ()=> {
     <div className="homeContainer">
       <div className="homeUp">
         <Logo/>
-        <div className="registerButton">
-          <button><Link to="/cadastrar">Cadastrar um ponto turístico</Link></button>
+        <div>
+          <button className="buttonCadastrarPontoTuristico"><Link style={{textDecoration:"none"}} to="/cadastrar">Cadastrar um ponto turístico</Link></button>
         </div>
       </div>
       <div className="homeDown">
@@ -40,9 +40,13 @@ const Home = ()=> {
           <button>Buscar</button>
         </div>
       </div>
-      {pontosTuristicos.map((item, index)=> (
-        <PontoTuristico data={item}/>
-      ))}
+      <div className="pontoTuristicoContiner">
+        <div className="pontoTuristicoSide">
+          {pontosTuristicos.map((item, index)=> (
+            <PontoTuristico data={item}/>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

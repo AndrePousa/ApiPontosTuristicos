@@ -6,9 +6,9 @@ const Header = ()=> {
   return (
    <div className='header'>
      <div className='headerBody'>
-       <ul>
-         <li><Link to="/">Home</Link></li>
-         <li><Link to="/cadastrar">Cadastrar</Link></li>
+       <ul className="ul">
+         <li className="li"><Link style={{textDecoration:"none"}} to="/">Home</Link></li>
+         <li className="li"><Link style={{textDecoration:"none"}} to="/cadastrar">Cadastrar</Link></li>
        </ul>
      </div>
    </div>

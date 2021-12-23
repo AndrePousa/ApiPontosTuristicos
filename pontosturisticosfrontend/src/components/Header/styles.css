@@ -1,10 +1,24 @@
 .header{
   display:flex;
-  width:100%;
+  width:100vw;
   height:70px;
-  background-color:#00a000;
+  background-color:#ff7f50;
 }
 
 .headerBody{
+  display:flex;
+  
+}
 
+.ul{
+  list-style: none;
+  display:flex;
+}
+
+li{
+  margin-left: 15px;
+}
+
+li:hover{
+  color:#00285f ;
 }

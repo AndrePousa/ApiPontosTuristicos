@@ -1,7 +1,7 @@
 .homeContainer{
   width:100vw;
   height:auto;
-  background-color: blue;
+  background-color: #054f77;
   display:flex;
   display: block;
   justify-content:center; 
@@ -10,44 +10,68 @@
 .homeUp{
   width:80%;
   height:150px;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   display:flex;
-  justify-content: space-between;
+  justify-content:center;
   padding-left: 50px;
 }
 
-.registerButton{
-  width:300px;
-  height:150px;
-  padding-top: 50px;
-  background-color: #fff;
-  margin-right: 100px;
+button{
+    border:1px solid;
+    padding:8px 40px;
+    cursor:pointer;
+    background:transparente;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+
+.buttonCadastrarPontoTuristico{
+  margin-top:80px;
+  margin-left: 50px;
 }
 
 .homeDown{
   width:80%;
   height:100px;
-  background-color: #fff;
+  background-color: #054f77;
   display:flex;
   justify-content: space-between;
   padding-left: 50px;
 }
 
 .divInput{
+  display:flex;
+  align-items: center;
   width:500px;
   height:50px;
-  background-color: rgb(218, 49, 49);
+  /* background-color: rgb(218, 49, 49); */
   padding-top: 50px;
 }
 
 .inputCamp{
-  width: 400px;
-  padding-left: 50px;
+  width:700px;
+  height: 30px;
+  border:solid 1px;
+  border-radius: 5px;
+  text-indent: 10px;
+  margin-bottom: 20px;
 }
 .searchButton{
   width:300px;
   height:50px;
-  padding-top: 50px;
-  background-color: rgb(30, 112, 150);
+  padding-top:48px;
+  /* background-color: rgb(30, 112, 150); */
   margin-right: 100px;
+}
+
+.pontoTuristicoContiner{
+  background-color: aliceblue;
+  display:flex;
+}
+
+.pontoTuristicoSide{
+  /* background-color: blueviolet; */
+  /* border:1px; */
+
 }
