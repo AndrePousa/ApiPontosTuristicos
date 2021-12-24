@@ -1,27 +1,38 @@
 .pontoTuristicoContainer{
-  padding-left:50px;
-  padding-right: 50px;
-  width:500px;
+  background-color: aliceblue;
+  width:100%;
+  padding:25px;
+  box-shadow:2px 2px 4px 0 rgba(56, 58, 57, 0.08);
+  margin-top: 20px;
+  border:1px solid rgba(56, 58, 57, 0.08);
 }
 
-.pontoTuristicoName{
-  margin-bottom: 0;
+.pontoTuristicoContainer span{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.pontoTuristicoDescription{
-  margin-bottom:0;
+.pontoTuristicoContainer > span{
+  margin-bottom: 10px;
 }
 
-.pontoTuristicoAddres{
-  margin-bottom: 0;
+.pontoTuristicoContainer > span:first-child{
+  justify-content: space-between;
 }
 
-.pontoTuriscoCity{
-  margin-bottom: 0;
+.pontoTuristicoContainer span p{
+  line-height: 20px;
+  margin:0;
 }
 
-.pontoTuristicoState{
-  margin-bottom: 0;
+.pontoTuristicoContainer span p:last-child{
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.pontoTuristicoContainer span p:first-child{
+  font-size: 13px;
 }
 
 .areaButtons{
@@ -29,4 +40,9 @@
 }
 .deletarButton{
   margin-left:50px;
+}
+
+.editarButton a{
+  text-decoration: none;
+  color:#000;
 }

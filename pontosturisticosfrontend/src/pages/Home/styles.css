@@ -7,15 +7,6 @@
   justify-content:center; 
 }
 
-.homeUp{
-  width:80%;
-  height:150px;
-  /* background-color: blueviolet; */
-  display:flex;
-  justify-content:center;
-  padding-left: 50px;
-}
-
 button{
   border:1px solid;
   padding:8px 40px;
@@ -25,51 +16,42 @@ button{
   border-radius:4px;
 }
 
-
-.buttonCadastrarPontoTuristico{
-  margin-top:80px;
-  margin-left: 50px;
+.buttonCadastrarPontoTuristico {
+  height: 35px;
+  margin-left: 10px;
 }
 
-.homeDown{
-  width:80%;
-  height:100px;
-  background-color: #054f77;
-  display:flex;
-  justify-content: space-between;
-  padding-left: 50px;
+.buttonCadastrarPontoTuristico a{
+  text-decoration: none;
+  color:#000;
 }
 
 .divInput{
-  display:flex;
   align-items: center;
-  width:500px;
-  height:50px;
-  /* background-color: rgb(218, 49, 49); */
-  padding-top: 50px;
+  background-color: #054f77;
+  display:flex;
+  padding:20px 50px;
+  justify-content: center;
+ 
 }
 
 .inputCamp{
-  width:700px;
+  width:350px;
   height: 30px;
   border:solid 1px;
   border-radius: 5px;
   text-indent: 10px;
-  margin-bottom: 20px;
 }
 .searchButton{
   height: 35px;
-  margin-bottom: 20px;
   margin-left: 10px;
 }
 
-.pontoTuristicoContiner{
-  background-color: aliceblue;
+.pontoTuristicoList{
   display:flex;
-}
-
-.pontoTuristicoSide{
-  /* background-color: blueviolet; */
-  /* border:1px; */
-
+  align-items: center;
+  flex-direction: column;
+  max-width: 860px;
+  margin:0 auto;
+  padding-bottom: 60px;
 }

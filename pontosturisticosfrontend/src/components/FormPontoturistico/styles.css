@@ -4,6 +4,7 @@
   background-color: aliceblue;
   display:flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .fieldName,.fieldCity, .fieldAddress, .fieldState, .fieldDescription {
@@ -16,11 +17,11 @@
   margin-top:5px;
 }
 
-.fieldState, .fieldDescription{
+.fieldState{
   width:350px;
 }
 
 .fieldDescription{
   height:150px;
-  padding:10px;
+  padding-top: 10px;
 }

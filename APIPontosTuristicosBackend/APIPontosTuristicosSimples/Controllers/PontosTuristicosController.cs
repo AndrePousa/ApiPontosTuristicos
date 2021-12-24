@@ -23,8 +23,17 @@ namespace APIPontosTuristicosSimples.Controllers
 
         //Get: api/<PontosTuristicosController>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PontoTuristico>>> GetPontoTuristico()
+        public async Task<ActionResult<IEnumerable<PontoTuristico>>> GetPontoTuristico(string search = "")
         {
+            //Search
+            if (!search.Trim().Equals(""))
+            {
+                return await _context.PontoTuristico.Where(
+                   pt => pt.name.Contains(search) || pt.description.Contains(search) || pt.address.Contains(search)
+                   || pt.city.Contains(search) || pt.state.Contains(search)
+                ).ToListAsync();
+            }
+           
             return await _context.PontoTuristico.ToListAsync();
         }
 

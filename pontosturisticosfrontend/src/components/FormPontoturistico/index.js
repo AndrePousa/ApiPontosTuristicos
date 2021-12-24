@@ -24,7 +24,7 @@ const FormPontoTuristico = ({ id }) => {
         description:description,
         state:state,
       }); 
-      Swal.fire("Cadastro Efetuado com sucesso") //não está funcionando
+      Swal.fire("Cadastro efetuado com sucesso")
     }
     else{
       let response = await axios.post('https://localhost:44329/api/PontosTuristicos',{
@@ -33,7 +33,8 @@ const FormPontoTuristico = ({ id }) => {
         city: city,
         description:description,
         state:state,
-      });  
+      });
+      Swal.fire("Cadastro efetuado com sucesso")  
     }
   }
   

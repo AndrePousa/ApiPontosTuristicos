@@ -1,46 +1,46 @@
 import React from 'react';
 import './styles.css';
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 
 const PontoTuristico = ({data}) =>{
 
   const deletePontoTuristico = async () =>{
 
     let response = await axios.delete(`https://localhost:44329/api/PontosTuristicos/${data.id}`)
+    Swal.fire("O Cadastro foi excluido")
   }
  
   return(
     <>
         <div className="pontoTuristicoContainer">
-          <h3>Ponto Turistico</h3>
-          
-            <h4 className="pontoTuristicoName">Nome:</h4>
-              {data.name} 
-          
-          
-            <h4 className="pontoTuristicoDescription">Descrição:</h4>
-              {data.description} 
-          
-          
-            <h4 className="pontoTuristicoAddres">Localização:</h4>
-              {data.address}
-          
-          
-            <h4 className="pontoTuriscoCity">Cidade:</h4>
-              {data.city}
-          
-          
-            <h4 className="pontoTuristicoState">Estado:</h4>
-              {data.state}
-          
+          <span>
+            <span>
+              <p className="pontoTuristicoName">Nome:</p>
+              <p>{data.name}</p>
+            </span>
+
+            <span>
+              <p className="pontoTuriscoCity">Cidade/UF:</p>
+              <p>{data.city}/{data.state}</p>
+            </span>
+          </span>
+            
+          <span>
+            <p className="pontoTuristicoAddres">Localização:</p>
+            <p>{data.address}</p>
+          </span> 
+            
+          <span>
+            <p className="pontoTuristicoDescription">Descrição:</p>
+            <p>{data.description}</p>
+          </span>
+            
           <div className="areaButtons">
-            <button><Link style={{textDecoration:"none"}} to={`/cadastrar/${data.id}`}>Editar</Link></button>
+            <button className="editarButton"><Link to={`/cadastrar/${data.id}`}>Editar</Link></button>
             <button className="deletarButton" onClick={deletePontoTuristico}>Deletar</button>
           </div>
-          <hr/>
         </div> 
     </> 
   )

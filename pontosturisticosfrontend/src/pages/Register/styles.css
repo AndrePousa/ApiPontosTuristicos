@@ -2,7 +2,7 @@
 .registerContainer{
   display:flex;
   width:100vw;
-  height:100vh;
   justify-content: center;
   background-color: #054f77;
+  padding:20px 0 60px;
 }
