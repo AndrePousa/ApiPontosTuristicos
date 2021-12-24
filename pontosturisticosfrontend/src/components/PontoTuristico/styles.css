@@ -1,14 +1,27 @@
 .pontoTuristicoContainer{
   padding-left:50px;
   padding-right: 50px;
-  /* width:100vw; */
+  width:500px;
 }
 
 .pontoTuristicoName{
+  margin-bottom: 0;
 }
 
-.pontoTuristicoDescricao{
+.pontoTuristicoDescription{
+  margin-bottom:0;
+}
 
+.pontoTuristicoAddres{
+  margin-bottom: 0;
+}
+
+.pontoTuriscoCity{
+  margin-bottom: 0;
+}
+
+.pontoTuristicoState{
+  margin-bottom: 0;
 }
 
 .areaButtons{

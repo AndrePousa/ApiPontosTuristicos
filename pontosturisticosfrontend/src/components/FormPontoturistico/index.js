@@ -1,13 +1,10 @@
 import axios from 'axios';
+import { Alert } from 'bootstrap';
 import React, {useEffect, useState} from 'react';
+import Swal from 'sweetalert2';
 import './styles.css';
 
 const FormPontoTuristico = ({ id }) => {
-
-  // "name": "clubedoscomerciarios",
-  // "address": "Avenida Tamaios",
-  // "city": "tupã",
-  // "state": "SP"
 
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
@@ -26,7 +23,8 @@ const FormPontoTuristico = ({ id }) => {
         city: city,
         description:description,
         state:state,
-      });
+      }); 
+      Swal.fire("Cadastro Efetuado com sucesso") //não está funcionando
     }
     else{
       let response = await axios.post('https://localhost:44329/api/PontosTuristicos',{
@@ -35,11 +33,10 @@ const FormPontoTuristico = ({ id }) => {
         city: city,
         description:description,
         state:state,
-    });
+      });  
     }
- 
   }
-
+  
   const getPontoTuristico = async (id) => {
      
     const response = await axios.get(`https://localhost:44329/api/PontosTuristicos/${id}`)
@@ -63,21 +60,18 @@ const FormPontoTuristico = ({ id }) => {
     <>
       <div className="formContainer">
         <form>
-          <div className="fieldName">
-            <label for="name"><strong>Nome</strong></label>
-            <input value={name} type="text" name="name" onChange={ e => setName(e.target.value)}/>
-          </div>
-          <div className="fieldCity">
-            <label for="city"><strong>Cidade</strong></label>
-            <input value={city} type="text" name="city" onChange={e => setCity(e.target.value)}/>
-          </div>
-          <div className="fieldAddress">
-            <label for="address"><strong>Endereço</strong></label>
-            <input value={address} type="text" name="address" onChange={e => setAddress(e.target.value)}/>
-          </div>
-          <div className="fieldState">
-            <label for="state"><strong>Estado</strong></label>
-            <select value={state} name="state" onChange={e => setState(e.target.value)}>
+            <h2>Cadastrar Ponto Turistico</h2>
+            <label for="name"><strong>Nome:</strong></label><br/>
+            <input  className="fieldName" value={name} type="text" name="name" onChange={ e => setName(e.target.value)}/><br/>
+           
+            <label for="city"><strong>Cidade:</strong></label><br/>
+            <input className="fieldCity" value={city} type="text" name="city" onChange={e => setCity(e.target.value)}/><br/>
+          
+            <label for="address"><strong>Endereço/Localização:</strong></label><br/>
+            <input className="fieldAddress" value={address} type="text" name="address" onChange={e => setAddress(e.target.value)}/><br/>
+          
+            <label for="state"><strong>Estado:</strong></label><br/>
+            <select className="fieldState" value={state} name="state" onChange={e => setState(e.target.value)}><br/>
               <option>Selecione o Estado</option>
               <option value="Acre">Acre</option>
               <option value="Alagoas">Alagoas</option>
@@ -105,12 +99,10 @@ const FormPontoTuristico = ({ id }) => {
               <option value="São Paulo">São Paulo</option>
               <option value="Sergipe">Sergipe</option>
               <option value="Tocantins">Tocantins</option>
-            </select>
-          </div>
-          <div className="fieldDescription">
-            <label for="description"><strong>Descrição</strong></label>
-            <textarea onChange={e => setDescription(e.target.value)} type="text" name="description">{description}</textarea>
-          </div>
+            </select><br/>
+    
+            <label for="description"><strong>Descrição:</strong></label><br/>
+            <textarea className="fieldDescription" value={description} onChange={e => setDescription(e.target.value)} type="text" name="description">{description}</textarea><br/>
           <button onClick={savePontoTuristico}>Cadastrar</button>
         </form>
       </div> 

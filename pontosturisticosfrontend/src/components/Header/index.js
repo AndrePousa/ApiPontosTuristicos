@@ -4,14 +4,42 @@ import './styles.css';
 
 const Header = ()=> {
   return (
-   <div className='header'>
-     <div className='headerBody'>
-       <ul className="ul">
-         <li className="li"><Link style={{textDecoration:"none"}} to="/">Home</Link></li>
-         <li className="li"><Link style={{textDecoration:"none"}} to="/cadastrar">Cadastrar</Link></li>
-       </ul>
+   <header>
+     <div className='container'>
+       <div className="menu">
+        <nav>
+          <ul>
+            <li className="active">
+              <Link 
+                style={{
+                  textDecoration:"none",
+                  display:"block",
+                  padding:"15px",
+                  textTransform:"uppercase",
+                  color:"#054f77",
+                  fontFamily:"Arial",
+                }} 
+                to="/"><strong>Home</strong>
+              </Link>
+            </li>
+            <li className="active">
+              <Link 
+                style={{
+                  textDecoration:"none",
+                  display:"block",
+                  padding:"15px",
+                  textTransform:"uppercase",
+                  color:"#054f77",
+                  fontFamily:"Arial"
+                }}
+                to="/cadastrar"><strong>Cadastrar</strong>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+       </div>
      </div>
-   </div>
+   </header>
   );
 }
 

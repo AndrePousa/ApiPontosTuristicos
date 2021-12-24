@@ -34,11 +34,10 @@ const Home = ()=> {
           <input 
             className="inputCamp"
             placeholder='Digite sua busca'
-            />
+          />
+          <button className="searchButton">Buscar</button>
         </div>
-        <div className="searchButton">
-          <button>Buscar</button>
-        </div>
+         
       </div>
       <div className="pontoTuristicoContiner">
         <div className="pontoTuristicoSide">

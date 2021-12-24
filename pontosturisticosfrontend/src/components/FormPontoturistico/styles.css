@@ -1,7 +1,26 @@
 .formContainer{
-  width: 400px;
-  height: 600px;
-  background-color: aquamarine;
+  width: 800px;
+  height: auto;
+  background-color: aliceblue;
   display:flex;
   justify-content: center;
+}
+
+.fieldName,.fieldCity, .fieldAddress, .fieldState, .fieldDescription {
+  width:700px;
+  height: 30px;
+  border:solid 1px;
+  border-radius: 5px;
+  text-indent: 10px;
+  margin-bottom: 20px;
+  margin-top:5px;
+}
+
+.fieldState, .fieldDescription{
+  width:350px;
+}
+
+.fieldDescription{
+  height:150px;
+  padding:10px;
 }
