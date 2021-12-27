@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace APIPontosTuristicosSimples.Data
 {
-    public class PontoTuristicoDbContest : DbContext
+    public class PontoTuristicoDbContext : DbContext
     {
-        public PontoTuristicoDbContest(DbContextOptions options) : base(options)
+        public PontoTuristicoDbContext(DbContextOptions options) : base(options)
         {
 
         }

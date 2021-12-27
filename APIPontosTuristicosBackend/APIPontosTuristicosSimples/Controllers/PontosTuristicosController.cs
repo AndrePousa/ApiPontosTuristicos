@@ -14,27 +14,41 @@ namespace APIPontosTuristicosSimples.Controllers
     [ApiController]
     public class PontosTuristicosController : ControllerBase
     {
-        private readonly PontoTuristicoDbContest _context;
+        private readonly PontoTuristicoDbContext _context;
 
-        public PontosTuristicosController(PontoTuristicoDbContest context)
+        public PontosTuristicosController(PontoTuristicoDbContext context)
         {
             _context = context;
         }
 
         //Get: api/<PontosTuristicosController>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PontoTuristico>>> GetPontoTuristico(string search = "")
+        public async Task<ActionResult<GenericList<PontoTuristico>>> GetPontoTuristico(int page = 1, string search = "")
         {
-            //Search
+            int skip = (page -1) * 5;
+
+            //Search-Paginação
+            // 1 => 0
+            // 2 => 5
+            // 3 => 10
+            // 4 => 15
+            IQueryable<PontoTuristico> pontoTuristico = _context.PontoTuristico;
+
+            GenericList<PontoTuristico> list = new GenericList<PontoTuristico>();
+           
             if (!search.Trim().Equals(""))
             {
-                return await _context.PontoTuristico.Where(
+                pontoTuristico = pontoTuristico.Where(
                    pt => pt.name.Contains(search) || pt.description.Contains(search) || pt.address.Contains(search)
                    || pt.city.Contains(search) || pt.state.Contains(search)
-                ).ToListAsync();
+                );
             }
-           
-            return await _context.PontoTuristico.ToListAsync();
+
+            list.count = pontoTuristico.Count();
+
+            list.list = await pontoTuristico.OrderByDescending((pt) => pt.created).Skip(skip).Take(5).ToListAsync();
+
+            return list;
         }
 
         //Get api /<PontosTuristicos>/5
@@ -54,6 +68,7 @@ namespace APIPontosTuristicosSimples.Controllers
         [HttpPost]
         public async Task<ActionResult<PontoTuristico>> PostPontoTuristico(PontoTuristico pontoTuristico)
         {
+            pontoTuristico.created = DateTime.Now;
             _context.PontoTuristico.Add(pontoTuristico);
             await _context.SaveChangesAsync();
 
@@ -68,6 +83,7 @@ namespace APIPontosTuristicosSimples.Controllers
                 return BadRequest();
             }
 
+            pontoTuristico.updated = DateTime.Now;
             _context.Entry(pontoTuristico).State = EntityState.Modified;
 
             try

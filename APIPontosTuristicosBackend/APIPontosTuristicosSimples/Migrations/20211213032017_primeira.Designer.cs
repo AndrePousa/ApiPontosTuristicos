@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIPontosTuristicosSimples.Migrations
 {
-    [DbContext(typeof(PontoTuristicoDbContest))]
+    [DbContext(typeof(PontoTuristicoDbContext))]
     [Migration("20211213032017_primeira")]
     partial class primeira
     {

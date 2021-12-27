@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { Alert } from 'bootstrap';
 import React, {useEffect, useState} from 'react';
 import Swal from 'sweetalert2';
+import { API_URL } from '../../config';
 import './styles.css';
 
 const FormPontoTuristico = ({ id }) => {
@@ -11,36 +11,39 @@ const FormPontoTuristico = ({ id }) => {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [description, setDescription] = useState('');
+  const [created, setCreated] = useState(new Date());
 
+ 
   const savePontoTuristico = async (event)=> {
     event.preventDefault();
 
     if(id){
-      let response = await axios.put(`https://localhost:44329/api/PontosTuristicos/${id}`, {
+      let response = await axios.put(`${API_URL}api/PontosTuristicos/${id}`, {
         id:id,
         name:name,
         address:address,
         city: city,
         description:description,
         state:state,
+        created:created,
       }); 
-      Swal.fire("Cadastro efetuado com sucesso")
+      Swal.fire("Edição efetuada com sucesso !") 
     }
     else{
-      let response = await axios.post('https://localhost:44329/api/PontosTuristicos',{
+      let response = await axios.post(`${API_URL}api/PontosTuristicos`,{
         name:name,
         address:address,
         city: city,
         description:description,
         state:state,
       });
-      Swal.fire("Cadastro efetuado com sucesso")  
+      Swal.fire("Cadastro efetuado com sucesso !")
     }
   }
   
   const getPontoTuristico = async (id) => {
      
-    const response = await axios.get(`https://localhost:44329/api/PontosTuristicos/${id}`)
+    const response = await axios.get(`${API_URL}api/PontosTuristicos/${id}`)
 
     if(response.data){
       setName(response.data.name);
@@ -48,6 +51,7 @@ const FormPontoTuristico = ({ id }) => {
       setCity(response.data.city);
       setState(response.data.state);
       setDescription(response.data.description);
+      setCreated(response.data.created);
     }
   }
 

@@ -292,7 +292,6 @@ C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPo
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\obj\Debug\net5.0\APIPontosTuristicosSimples.csproj.AssemblyReference.cache
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\obj\Debug\net5.0\APIPontosTuristicosSimples.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\obj\Debug\net5.0\APIPontosTuristicosSimples.AssemblyInfoInputs.cache
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\obj\Debug\net5.0\APIPontosTuristicosSimples.AssemblyInfo.cs
@@ -315,3 +314,4 @@ C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPo
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\Andre\source\repos\ApiPontosTuristicos\APIPontosTuristicosBackend\APIPontosTuristicosSimples\obj\Debug\net5.0\APIPontosTuristicosSimples.csproj.AssemblyReference.cache

@@ -55,3 +55,31 @@ button{
   margin:0 auto;
   padding-bottom: 60px;
 }
+
+.ListButton {
+  display:flex;
+  list-style: none;
+}
+.ListButton li{
+  margin-right: 10px;
+}
+
+
+.renderPaginationContainer{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.buttonPage{
+  text-align: center;
+  padding: 8px 13px;
+}
+
+.errMessage{
+  color:aliceblue;
+}
+
+
+

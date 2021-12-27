@@ -3,13 +3,15 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { API_URL } from '../../config';
 
-const PontoTuristico = ({data}) =>{
+const PontoTuristico = ({data,refresh}) =>{
 
   const deletePontoTuristico = async () =>{
 
-    let response = await axios.delete(`https://localhost:44329/api/PontosTuristicos/${data.id}`)
-    Swal.fire("O Cadastro foi excluido")
+    let response = await axios.delete(`${API_URL}api/PontosTuristicos/${data.id}`)
+    Swal.fire("O Cadastro foi excluido.")
+    refresh();
   }
  
   return(
@@ -36,7 +38,7 @@ const PontoTuristico = ({data}) =>{
             <p className="pontoTuristicoDescription">Descrição:</p>
             <p>{data.description}</p>
           </span>
-            
+ 
           <div className="areaButtons">
             <button className="editarButton"><Link to={`/cadastrar/${data.id}`}>Editar</Link></button>
             <button className="deletarButton" onClick={deletePontoTuristico}>Deletar</button>

@@ -31,7 +31,7 @@ namespace APIPontosTuristicosSimples
         {
             
             //Configuração para realizar a Migration
-            services.AddDbContext<PontoTuristicoDbContest>(optionsAction: options =>
+            services.AddDbContext<PontoTuristicoDbContext>(optionsAction: options =>
                  options.UseSqlServer(Configuration.GetConnectionString(name: "DefaultConnection")));
 
             services.AddControllers();
